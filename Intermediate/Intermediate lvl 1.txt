@@ -1,0 +1,18 @@
+#Ajout d'une fonction pour avancer
+
+class Player
+
+  #Fonction pour faire marcher le guerrier
+  def walk(direction)
+    @warrior.walk!(direction)
+  end
+
+  #Fontion décidant quelle action le guerrier va effectuer pendant son tour 
+  def play_turn(warrior)
+    @warrior = warrior
+    @stairs_direction = @warrior.direction_of_stairs
+    
+    walk(@stairs_direction)
+  end
+end
+  
